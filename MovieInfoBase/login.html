@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login_body">
+    
+    <h1 class="login_h1"><b>Login</b></h1>
+    <form>
+
+    <br /><br /><br /><br />
+    <label id="name">Username:</label><br /><br />
+    <input id= "userName" class="inp" type="text" placeholder="username"/><br /><br /><br /><br />
+
+    <label id="password">Password:</label><br /><br />
+    <input class="inp" type="password" placeholder="password"/><br /><br /><br />
+    
+    <button class="btn" type="button" onclick="loginFunction()">Login</button>
+    <a href="Signin.html">
+        <button class="btn" type="button">Sign In</button>
+    </a>
+   </form>
+   <script>
+    function loginFunction(){
+        const uName = document.getElementById('userName').value;
+        if(uName!='' && password!=''){
+            alert("user "+uName+" Login successful");
+            moviesPage();
+        }
+        else{
+            alert("Please enter login credentials");
+        }
+    }
+    function moviesPage(){
+        window.location.href = "movies.html"
+    }
+    </script>
+</body>
+</html>
